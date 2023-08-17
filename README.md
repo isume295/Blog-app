@@ -137,6 +137,8 @@ To run tests, run the following command:
 
 - to test ruby linter errors  `rubocop`
 
+- to test the classes ` rails c`
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
