@@ -3,11 +3,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :posts, foreign_key: 'author_id'
 
-  # attribute
-  attribute :name, :string
-  attribute :bio, :text
-  attribute :posts_count, :integer, default: 0
-  attribute :photo, :string
+  # Attributes: id, name, photo, bio, updated_at, created_at, posts_count
 
   # method
   def recent_posts
