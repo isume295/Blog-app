@@ -9,7 +9,6 @@ class Post < ApplicationRecord
   validates :comments_count, numericality: { greater_than_or_equal_to: 0, only_integer: true }
   validates :likes_count, numericality: { greater_than_or_equal_to: 0, only_integer: true }
 
-
   # callback
   after_save :update_user_posts_counter
 
