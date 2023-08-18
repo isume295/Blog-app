@@ -8,8 +8,6 @@ class Like < ApplicationRecord
   after_save :update_post_likes_counter
 
   # Methods
-  private
-
   def update_post_likes_counter
     post.update(likes_count: post.likes.count)
   end
