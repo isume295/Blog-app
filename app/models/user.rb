@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   # Validations
   validates :name, presence: true
-  validates :posts_count, numericality: { greater_than_or_equal_to: 0, only_integer: true }
+  validates :posts_count, numericality: { greater_than_or_equal_to: 0, only_integer: true, allow_blank: true }
 
   # method
   def recent_posts
