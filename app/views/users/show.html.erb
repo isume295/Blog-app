@@ -1,2 +1,30 @@
-<h1>User Profile</h1>
-<p>Here is the profile for user <%= @user_id %>.</p>
+
+<div class="container">
+<div class="all-container">
+<div class="img-container">
+<img src="<%= @user.photo %>" alt="img" />
+</div>
+<div class="user-container">
+<h4 class="name"><%= @user.name %></h4>
+<div class="posts">
+<p>Number of posts: <%= @user.posts_count %></p>
+</div>
+</div>
+</div>
+<div class="bio">
+<h3>Bio</h3>
+<p><%= @user.bio %></p>
+</div>
+<div class="bio">
+<% @recent_posts.each do |post| %>
+<h3><%= post.title %></h3>
+<p><%= post.text %></p>
+<div class="posts">
+<p>comments: <%= post.comments_count %> likes: <%= post.likes_count %></p>
+</div>
+<% end %>
+</div>
+<div class="button-container">
+<a href="<%= user_posts_path(@user) %>" class="btn">see all posts</a>
+</div>
+</div>
