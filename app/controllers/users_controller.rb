@@ -6,6 +6,8 @@ class UsersController < ApplicationController
 
   def show
     @user_id = params[:id]
+    @user = User.find_by(id: @user_id)
+    @recent_posts = @user.recent_posts
     # Placeholder action for the 'users/:id' URL
   end
 end

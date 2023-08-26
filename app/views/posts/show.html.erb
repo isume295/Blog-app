@@ -1,2 +1,22 @@
-<h1>User Posts</h1>
-<p>Here is a list of posts for user <%= @user_id %>.</p>
+
+<div class="container">
+<div class="main-container">
+ 
+<div class="bio p">
+<div class="post-detail">
+<h3> <%= @post.title %> by <%= @post.author.name %> </h3>
+<p>comments: <%= @post.comments_count %> likes: <%= @post.likes_count %></p>
+</div>
+<p> <%= @post.text %></p>
+</div>
+
+<ul class="comments">
+<li class="comment-title"><strong>Comments: <%= @post.comments_count %> </strong></li>
+<% @post.recent_comments.each do |comment, index| %>
+<li><strong><%= comment.author.name %> </strong> <%= comment.text %> </li>
+<% end %>
+
+</ul>
+
+ </div>
+ </div>
