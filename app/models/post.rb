@@ -6,8 +6,8 @@ class Post < ApplicationRecord
   # Attributes: id, author_id, title, text, updated_at, created_at, comments_count, likes_count
 
   validates :title, presence: true, length: { maximum: 250 }
-  validates :comments_count, numericality: { greater_than_or_equal_to: 0, only_integer: true }
-  validates :likes_count, numericality: { greater_than_or_equal_to: 0, only_integer: true }
+  validates :comments_count, numericality: { greater_than_or_equal_to: 0, only_integer: true, allow_blank: true }
+  validates :likes_count, numericality: { greater_than_or_equal_to: 0, only_integer: true, allow_blank: true }
 
   # callback
   after_save :update_user_posts_counter

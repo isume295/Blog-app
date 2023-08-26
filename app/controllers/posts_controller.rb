@@ -13,4 +13,29 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: @post_id)
     # Placeholder action for the 'users/:user_id/posts/:id' URL
   end
+
+  def create
+    @post = current_user.posts.build(post_params)
+
+    if @post.save
+      # Post successfully created
+      flash[:notice] = 'Post created successfully.'
+      redirect_to user_path(current_user)
+
+    else
+      # Handle validation errors
+      render :new
+    end
+  end
+
+  def new
+    @user = current_user
+    @post = @user.posts.new
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end

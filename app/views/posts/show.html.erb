@@ -18,5 +18,14 @@
 
 </ul>
 
+<div class="button-container">
+<div class="like">
+<%= form_with(model: Like.new, url: user_post_likes_path(@user_id, @post)) do |form| %>
+    <%= form.submit "Like" %>
+  <% end %>
+</div>
+<a href= "<%= new_user_post_comment_path(@user_id, @post) %>" class="btn"> Add Comment</a>
+</div>
+
  </div>
  </div>
