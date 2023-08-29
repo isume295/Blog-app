@@ -8,7 +8,7 @@ RSpec.describe 'Posts', type: :request do
       get user_posts_path(user_id: user.id)
       expect(response).to have_http_status(:ok)
       expect(response).to render_template(:index)
-      expect(response.body).to include('User Posts')
+      expect(response.body).to include("#{user.name}")
     end
   end
 
@@ -20,7 +20,7 @@ RSpec.describe 'Posts', type: :request do
       get user_post_path(user_id: user.id, id: post.id)
       expect(response).to have_http_status(:ok)
       expect(response).to render_template(:show)
-      expect(response.body).to include('User Posts')
+      expect(response.body).to include("#{user.name}")
     end
   end
 end
