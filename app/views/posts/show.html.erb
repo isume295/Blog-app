@@ -12,7 +12,7 @@
 
 <ul class="comments">
 <li class="comment-title"><strong>Comments: <%= @post.comments_count %> </strong></li>
-<% @post.recent_comments.each do |comment, index| %>
+<% @post.recent_comments.includes(:author).each do |comment, index| %>
 <li><strong><%= comment.author.name %> </strong> <%= comment.text %> </li>
 <% end %>
 
