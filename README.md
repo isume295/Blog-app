@@ -131,7 +131,7 @@ To run tests, run the following command:
 
 - to test the classes ` rails c`
 
-- to run spec file ` rspec`
+- to run spec file ` rspec spec` or ` bundle exec rspec spec`
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -145,6 +145,10 @@ To run tests, run the following command:
 
 - GitHub: [@isume295](https://github.com/isume295)
 
+👤 : **Yashodhi Chathurangi**
+
+- GitHub: [@githubhandle](https://github.com/yashodhicy)
+ 
  
 
 <!-- FUTURE FEATURES -->

@@ -17,8 +17,8 @@
 </div>
 <div class="bio">
 <% @recent_posts.each do |post| %>
-<h3><%= post.title %></h3>
-<p><%= post.text %></p>
+<a href = "<%= user_post_path(@user, post) %>" >
+<h3><%= post.title %></h3><p><%= post.text %></p>
 <div class="posts">
 <p>comments: <%= post.comments_count %> likes: <%= post.likes_count %></p>
 </div>
