@@ -43,45 +43,44 @@ RSpec.describe 'post index view page', type: :system do
     end
 
     it 'displays the user\'s username' do
-        expect(page).to have_content(user1.name)
+      expect(page).to have_content(user1.name)
     end
 
     it 'displays the number of posts the user has written' do
-        expect(page).to have_content("Number of posts: #{user1.posts_count}")
+      expect(page).to have_content("Number of posts: #{user1.posts_count}")
     end
 
     it 'displays a post\'s title and text' do
-        expect(page).to have_content(post1.title)
-        expect(page).to have_content(post1.text)
-        expect(page).to have_content(post2.title)
-        expect(page).to have_content(post2.text)
-      end
-  
-      it 'displays the first comments on a post' do
-        expect(page).to have_content(comment1.text)
-      end
-  
-      it 'displays the number of comments a post has' do
-        expect(page).to have_content("comments: #{post1.comments_count}")
-      end
-  
-      it 'displays the number of likes a post has' do
-        expect(page).to have_content("likes: #{post1.likes_count}")
-      end
-  
-      it 'redirects to the post show page when a post is clicked' do
-        click_link post1.title
-        expect(page).to have_current_path(user_post_path(user1, post1))
-        expect(page).to have_content(post1.title)
-      end
-  
-      it 'displays a section for pagination if there are more posts' do
-        # Set the user's posts_counter to a value that exceeds the page limit
-        user1.update(posts_count: 10)
-  
-        visit user_path(user1)
-        expect(page).to have_selector('.button-container')
-      end
- 
+      expect(page).to have_content(post1.title)
+      expect(page).to have_content(post1.text)
+      expect(page).to have_content(post2.title)
+      expect(page).to have_content(post2.text)
+    end
+
+    it 'displays the first comments on a post' do
+      expect(page).to have_content(comment1.text)
+    end
+
+    it 'displays the number of comments a post has' do
+      expect(page).to have_content("comments: #{post1.comments_count}")
+    end
+
+    it 'displays the number of likes a post has' do
+      expect(page).to have_content("likes: #{post1.likes_count}")
+    end
+
+    it 'redirects to the post show page when a post is clicked' do
+      click_link post1.title
+      expect(page).to have_current_path(user_post_path(user1, post1))
+      expect(page).to have_content(post1.title)
+    end
+
+    it 'displays a section for pagination if there are more posts' do
+      # Set the user's posts_counter to a value that exceeds the page limit
+      user1.update(posts_count: 10)
+
+      visit user_path(user1)
+      expect(page).to have_selector('.button-container')
+    end
   end
 end

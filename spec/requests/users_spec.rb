@@ -28,7 +28,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'includes the correct placeholder text in the response body' do
       get "/users/#{user.id}"
-      expect(response.body).to include("#{user.name}")
+      expect(response.body).to include(user.name.to_s)
     end
 
     it 'renders the show template' do
