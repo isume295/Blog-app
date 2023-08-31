@@ -1,9 +1,15 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+    
+      
   has_many :comments
   has_many :likes
   has_many :posts, foreign_key: 'author_id'
 
-  # Attributes: id, name, photo, bio, updated_at, created_at, posts_count
+  # Attributes: id, name, email, encrypted_password, reset_password_token, reset_password_sent_at, remember_created_at, created_at, updated_at, bio,photo
 
   # Validations
   validates :name, presence: true
