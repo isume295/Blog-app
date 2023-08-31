@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-        #  attr_accessible :name, :bio, :photo, :email, :password, :password_confirmation, :confirmed_at
+  #  attr_accessible :name, :bio, :photo, :email, :password, :password_confirmation, :confirmed_at
 
   has_many :comments
   has_many :likes
