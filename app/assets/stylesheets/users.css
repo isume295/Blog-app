@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+
   /* background-color: green; */
   display: flex;
   flex-direction: column;
@@ -9,17 +10,20 @@
   gap: 30px;
   margin-bottom: 10px;
 }
+
 .all-container {
   width: 50%;
   display: flex;
   gap: 2rem;
 }
+
 .img-container img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: yellow;
 }
+
 .user-container {
   width: 80%;
   display: flex;
@@ -30,23 +34,28 @@
   text-decoration: none;
   color: black;
 }
+
 .user-container:hover {
   border: solid 2px rgb(118, 104, 178);
   color: rgb(118, 104, 178);
 }
+
 .name {
   font-size: 40px;
 }
+
 .posts {
   display: flex;
   width: 100%;
   justify-content: flex-end;
   align-items: flex-end;
 }
+
 .posts p {
   font-size: 17px;
   font-weight: bold;
 }
+
 .bio {
   display: flex;
   width: 50%;
@@ -57,36 +66,43 @@
   border: solid 2px black;
   padding: 10px 24px;
 }
+
 .button-container {
   margin-top: 10px;
   display: flex;
   gap: 10px;
 }
+
 .btn {
   border: solid 2px black;
   text-decoration: none;
   padding: 6px 12px;
   color: black;
 }
+
 .btn:hover {
   border: solid 2px rgb(118, 104, 178);
   color: rgb(118, 104, 178);
 }
+
 .comments {
   border: solid 2px black;
   width: 100%;
   list-style: none;
   padding: 10px 24px;
 }
+
 .p {
   width: 100%;
   text-decoration: none;
   color: black;
 }
+
 .p:hover {
   border: solid 2px rgb(118, 104, 178);
   color: rgb(118, 104, 178);
 }
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -95,15 +111,18 @@
   justify-content: center;
   align-items: center;
 }
+
 .comment-title {
   padding-bottom: 10px;
 }
+
 .post-detail {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+
 textarea,
 [type="text"],
 [type="email"],
@@ -113,30 +132,34 @@ textarea,
   border: 2px solid #ccc;
   border-radius: 4px;
 }
+
 .field {
   display: flex;
   justify-content: space-between;
   gap: 6px;
   padding-bottom: 10px;
 }
+
 input[type="submit"] {
   padding: 10px 20px;
-  background-color: #6091DF;
+  background-color: #6091df;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
+
 .login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: #6091DF 2px solid;
+  border: #6091df 2px solid;
   border-radius: 4px;
   width: 25%;
   padding: 10px 0;
 }
+
 .login-btn {
   display: flex;
   justify-content: center;
@@ -144,195 +167,29 @@ input[type="submit"] {
   width: 100%;
   padding-bottom: 10px;
 }
+
 .center {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
+
 .signup {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: #6091DF 2px solid;
+  border: #6091df 2px solid;
   border-radius: 4px;
   width: 45%;
   padding: 10px 0;
 }
+
 .t {
   padding-bottom: 20px;
 }
-.rme {
-  display: flex;
-  align-items: center;
-  padding-bottom: 10px;
-  gap: 5px;
-}.container {
-  width: 100%;
-  /* background-color: green; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 24px;
-  gap: 30px;
-  margin-bottom: 10px;
-}
-.all-container {
-  width: 50%;
-  display: flex;
-  gap: 2rem;
-}
-.img-container img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: yellow;
-}
-.user-container {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 0 24px;
-  border: solid 2px black;
-  text-decoration: none;
-  color: black;
-}
-.user-container:hover {
-  border: solid 2px rgb(118, 104, 178);
-  color: rgb(118, 104, 178);
-}
-.name {
-  font-size: 40px;
-}
-.posts {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.posts p {
-  font-size: 17px;
-  font-weight: bold;
-}
-.bio {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border: solid 2px black;
-  padding: 10px 24px;
-}
-.button-container {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-}
-.btn {
-  border: solid 2px black;
-  text-decoration: none;
-  padding: 6px 12px;
-  color: black;
-}
-.btn:hover {
-  border: solid 2px rgb(118, 104, 178);
-  color: rgb(118, 104, 178);
-}
-.comments {
-  border: solid 2px black;
-  width: 100%;
-  list-style: none;
-  padding: 10px 24px;
-}
-.p {
-  width: 100%;
-  text-decoration: none;
-  color: black;
-}
-.p:hover {
-  border: solid 2px rgb(118, 104, 178);
-  color: rgb(118, 104, 178);
-}
-.main-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-}
-.comment-title {
-  padding-bottom: 10px;
-}
-.post-detail {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-textarea,
-[type="text"],
-[type="email"],
-[type="password"] {
-  padding: 6px;
-  width: 100%;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-}
-.field {
-  display: flex;
-  justify-content: space-between;
-  gap: 6px;
-  padding-bottom: 10px;
-}
-input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #6091DF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: #6091DF 2px solid;
-  border-radius: 4px;
-  width: 25%;
-  padding: 10px 0;
-}
-.login-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 10px;
-}
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.signup {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: #6091DF 2px solid;
-  border-radius: 4px;
-  width: 45%;
-  padding: 10px 0;
-}
-.t {
-  padding-bottom: 20px;
-}
+
 .rme {
   display: flex;
   align-items: center;
